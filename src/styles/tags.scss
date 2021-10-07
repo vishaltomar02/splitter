@@ -1,0 +1,36 @@
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .tip-tag {
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    width: 30%;
+    background: $very-dark-cyan;
+    color: $white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+
+    @include mobile {
+      width: 48%;
+    }
+    &.selected {
+      background: $strong-cyan;
+      color: $very-dark-cyan;
+    }
+
+    .tip-tag-text {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &--input {
+      background: $light-grayish-cyan2;
+      color: $dark-greyish-cyan2;
+    }
+  }
+}

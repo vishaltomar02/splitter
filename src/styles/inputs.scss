@@ -1,0 +1,47 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .input-content {
+    position: relative;
+    width: 100%;
+
+    .absolute-positioned-svg {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: $light-grayish-cyan2;
+  padding: 0.5rem 0.75rem;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  &:focus {
+    outline: 1px solid $strong-cyan;
+    outline-style: auto;
+  }
+  &.error-input {
+    outline: 1px solid rgb(233, 145, 145);
+    outline-style: auto;
+  }
+}
+label {
+  font-size: 12px;
+  color: $dark-greyish-cyan2;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
